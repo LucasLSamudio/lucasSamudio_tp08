@@ -1,0 +1,566 @@
+/* Fonts y formas de usarlo: 
+
+.tinos-regular {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.tinos-regular-italic {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tinos-bold-italic {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 800
+
+.oxanium-<uniquifier> {
+    font-family: "Oxanium", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+} */
+
+    /* Normalizacion */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Mantiene el ancho y el alto pese a padding y border */
+    font-family: "Oxanium", serif;
+    list-style: none; /* Quitar los puntos y decoraciones de las listas */
+    text-decoration: none; /*Quita los subrayados de los enlaces */
+    color: white;
+}
+img{
+    width: 370px;
+    height: 370px;
+    /* border-radius: 50%; */
+}
+
+header{
+    position: fixed; /* Esto hace que el header se quede fijo en la parte superior */
+    /* right: 0; */
+    /* top: 0; */
+    z-index: 100; /* Esto hace que el header se muestre por encima */
+    width: 100%;
+    display: flex; /*Esto hará que los elementos se acomoden en linea */
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: #160029;
+}
+main{
+    background: linear-gradient( #131313 0%, #060047 25%, #1e0000 75%);
+}
+footer{
+    background: linear-gradient( #1e0000  0%, #200025  25%, #000000  75%)
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.nav-ul{
+    display: flex;
+}
+
+.nav-ul a{
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: solid 2px transparent; /* Subrayado transparente */
+    transition: all .5s ease; /* para transicionar todas las caracteristicas del nav-ul */
+}
+
+.nav-ul a:hover{
+    border-bottom: solid 2px white;
+}
+
+#menu-icon{
+    display: none; /*  Lo pongo en none para que solo se vea cuando la pag esté colapsada */
+    color: white;
+    font-size: 35px;
+    z-index: 101; /* Para que esté sobre el header */
+    cursor: pointer; /* Para que aparezca la mano al pasar el mouse encima */
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon-action{
+    display: none; /*Para que no se le pueda hacer click */
+}
+
+    /* HERO */
+.hero-description{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient( #31494e 0%, #385e70 25%, #131313 75%); /* 245.59deg, <-- Le da un grado especifico al degree*/
+    position: relative;
+    display: grid; /* Para que el hero se pueda dividir en dos columnas */
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    align-items: center; /* Para alinear verticalmente */
+    gap: 2rem; /* Espacio de 2 rem */
+}
+
+section{
+    padding: 0 8%;
+    h6{
+        margin-left: 20px;
+        font-size: 25px;
+    }
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.hero-description-h-p p{
+    font-family: "Tinos", serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.hero-description-h-p h1{
+    font-size: 45px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+.hero-description-h-p h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.hero-description-h-p h5{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.desc-hero-p{
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img{
+    margin: 10% 0 0 10%;
+    border: solid 4px rgb(98, 0, 0);
+    border-radius: 50%;
+    transition: all 5s ease;
+}
+
+.hero-img img:hover{
+    width: 450px;
+    height: 450px;
+}
+
+.hero-description-h-p a{
+    display: inline-block;
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.hero-description-h-p a:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.hero-description-h-p .boton-cv i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all .5s ease;
+}
+
+.icons i:hover{
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i{
+    width: 40px;
+    height: 40px;
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+
+article{
+    img{
+        width: 90%;
+        height: 90%;
+        border: solid 1px transparent;
+        transition: all .8s ease;
+    }
+}
+
+article{
+    width: 100%;
+    height: 100%;
+    .images-article{
+        display: flex;
+        flex-direction: column;
+        /* gap: 15px; */
+        justify-items: center;
+        img:hover{
+            width: 92%;
+            height: 92%;
+            border: solid 5px #00bcd9;
+        }
+    }
+    h6{
+        padding: 0 0 20px 0;
+    }
+    p{
+        padding: 20px 0;
+        font-size: 20px;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+        /* Formulario  */
+
+            form {
+
+                background: linear-gradient(55.80deg, #00094e 42%, #3b0000 64%);
+                line-height: 25px;
+                border: 5px ridge #34395d;
+                border-radius: 15px;
+                width: 60%;
+                display: flex;
+                justify-content: center;    
+                flex-direction: column;
+                padding: 3% 5%;
+                label{
+                    transition: all 2s ease;
+                }
+            }
+
+            .contacto {
+                display: flex;
+                flex-direction: column;
+                height:700px;
+                gap: 20px;
+                input{
+                    height: 7%;
+                }
+                textarea{
+                    height: 20%;
+                }
+                .button-form{
+                    height: 5%;
+                    background-color: #000598;
+                }
+            }
+
+            form label:hover {
+                transform: translateX(5px);
+                text-shadow: 5px 5px 3px rgb(19, 17, 17), 0 0 25px rgb(123, 123, 181), 2px 0 5px rgb(245, 245, 248);
+            }
+
+
+            form input {
+                color: black;
+                border: none;
+                border-radius: 2px;
+                padding: 5px;
+                width: 100%;
+                font-size: 12px;
+            }
+            
+            form textarea {
+                color: black;
+                font-size: 12px;
+                width: 100%;
+                height: 50px;
+            }
+            
+            input.boton-submit {
+                width: 15vw;
+                margin: 15px auto;
+                padding: 5px;
+                font-size: 12px;
+                font-weight: 600;
+                color: #080808;
+                transition: all .2s ease;
+            }
+            
+            input.boton-submit:hover {
+                background-color: #080808;
+                color: aliceblue;
+                cursor: pointer;
+            }
+        
+        /* Fin Formulario  */
+
+
+/* Media Queries  */
+
+
+@media (max-width: 992px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .hero-description-h-p{
+        padding-top: 0;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 80%;
+        height: 80%;
+        margin: 10% 0 0 10%;
+    }
+    .hero-img img:hover{
+        width: 425px;
+        height: 425px;
+    }    
+    .desc-hero-p{
+        font-size: 70%;
+    }
+    .icons{
+            display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .menu-icon-action{
+        display: block;
+    }
+    #menu-icon{
+        display: block;
+    }
+
+    .hero-description-h-p{
+        text-align: center;
+        padding-top: 100px;
+    }
+    .hero-img img{
+        width: 375px;
+        height: 375px;
+        margin: 0;
+        transition: all 2s ease;
+    }
+    .hero-img img:hover{
+        width: 375px;
+        height: 375px;
+        opacity: 0.7;
+        transform: translateX(10px);
+    }
+    .hero-description {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    article{
+        width: 100%;
+        height: 100%;
+        .images-article{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-items: center;
+            img{
+                width: 46%;
+                height: auto;
+                border: solid 1px transparent;
+            }
+}
+}
+    article{
+        width: 100%;
+        height: 100%;
+        .images-article{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-items: center;
+            img:hover{
+                width: 50%;
+                height: auto;
+                border: solid 5px #00bcd9;
+            }
+}
+}   
+    .nav-ul{
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            width: 200px;
+            height: 180px;
+            background-color: #001f12cd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            transition: all .5s ease;
+        }
+
+    .nav-ul a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+}
+@media (max-width: 425px){
+    main{
+        width: 71.8vh;
+    }
+    footer{
+        width: 71.8vh;
+    }
+    .hero-img img{
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        transition: all 2s ease;
+    }
+    .hero-img img:hover{
+        width: 300px;
+        height: 300px;
+        opacity: 0.7;
+        transform: translateX(10px);
+        margin: 0;
+    }
+    .hero-description{
+        width: 71.8vh;
+    }
+    article{
+        width: 100%;
+        height: 100%;
+        .images-article{
+            display: flex;
+            flex-direction: column;
+            /* gap: 15px; */
+            justify-items: center;
+            img:hover{
+                width: 92%;
+                height: 92%;
+                border: solid 5px #00bcd9;
+            }
+}
+}
+}
+
+
+@media (max-width: 1023px){
+    .scroll-down{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+
+    /* Formulario Version desktop */
+    article{
+        .images-article{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            img{
+                width: 45% ;
+                height: auto;
+            }
+        }
+    }
+    article{
+        .images-article{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            img:hover{
+                width: 46% ;
+                height: auto;
+            }
+        }
+    }
+
+    .contacto {
+        padding-top: 10px;
+    }
+    form{
+        padding:20px;
+        }
+    
+    form label {
+        line-height: 36px;
+        font-size: 18px;
+    }
+    
+    form input{
+        font-size: 14px;
+    }
+
+    form textarea{
+    height: 100px;
+    }
+}

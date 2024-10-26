@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samudio Lucas Web</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Font Awesome // https://fontawesome.com/search -->
+    <script src="https://kit.fontawesome.com/9ef932abc9.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts  // https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo"><i class="fa-solid fa-code"></i> SAMUDIO LUCAS</a>
+        
+        <!-- Truco para que el botón sea clickeable sin JS  -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class="fa-solid fa-bars" id="menu-icon"></div>
+        </label>
+            <ul class="nav-ul">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#aboutMe">Sobre mi</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+    </header>
+        
+        <section class="hero-description" id="aboutMe">
+            <div class="hero-description-h-p">
+                <p>Hola, soy</p>
+                <h1>Samudio Lucas</h1>
+                <h3>Estudiante de Programacion</h3>
+                <h5>Diseño web</h5>
+                <p class="desc-hero-p">
+                    ¡Hola! Soy Lucas Samudio. Estudiante de Licenciatura en Sistemas, 
+                    formándome como Full Stack Web Developer y asesor de ventas en Highsoft. <br>
+                    Con un año de experiencia, mi pasión es crear soluciones innovadoras. <br>
+                    ¡Explora mi página para saber más sobre mí!</p>
+                <div class="boton-cv">
+                    <a href=""><i class="fa-regular fa-file"></i>CV</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                    <img src="/assets/images/photoLucas.jpg" alt="Samudio Lucas Photo">
+            </div>
+        </section>
+        <div class="icons">
+            <ul class="icono-redes">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="scroll-down">
+            <a href="#"><i class="fa-solid fa-caret-down"></i></a>
+        </div>
+    <main>
+        <section>
+            <h2 id="projects">Proyectos</h2>
+            <article>
+                <h6>Mercado Liebre</h6>
+                <div class="images-article">
+                    <img src="/assets/images/mercadoLiebre.png" alt="">
+                    <img src="/assets/images/mercadoLiebre2.png" alt="">
+                </div>
+                <p>Página creada desde cero, aplicando todos los atributos correspondientes para hacer el diseño lo más similar posible a la página original de Mercado Libre.</p>
+            </article>
+            <article>
+                <h6>Hotel Costa</h6>
+                <div class="images-article">
+                    <img src="/assets/images/hotelCosta1.png" alt="">
+                    <img src="/assets/images/hotelCosta2.png" alt="">
+                    <img src="/assets/images/hotelCosta3Suites.png" alt="">
+                    <img src="/assets/images/hotelCosta4Spa.png" alt="">
+                </div>
+                <p>Página hecha de forma autónama e independiente, utilizando de referencia la página original para conseguir un diseño diferente, innovador y refrescante.</p>
+            </article>
+            <article>
+        </section>
+        <section>
+        </section>
+    </main>
+    <footer>
+        <h2>Contactame</h2>
+        <form action="" class="contacto" id="contact">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Ingrese su nombre">
+            
+            <label for="mail">Mail</label>
+            <input type="email" id="mail" placeholder="Ingrese su email">
+            
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Deje su mensaje"></textarea>
+            <input type="submit" value="Enviar" class="boton-submit">
+        </form>
+    </footer>
+</body>
+</html>
